@@ -35,7 +35,7 @@ If you use own structures in an array format, you will need to add their descrip
 =====  =====  ======
  Array full size swap types:
 --------------------
-  A      B    A or B
+  A      B     AorB  CoC     DoD
 =====  =====  =====  =====  ======
 int[] 	const int[] 	unsigned int[] 	const unsigned int[]
 short[] 	const short[] 	unsigned short[] 	const unsigned short[]
