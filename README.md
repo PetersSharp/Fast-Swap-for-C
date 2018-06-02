@@ -14,7 +14,7 @@ A functional combine producing swap objects of any types.
 - High speed of data processing.
 - Support C99 and above.
 
-To connect to your project, you need to declare a header file:
+To connect to your project, you need to declare a one header file:
 
 ````
 #include "fswap.h"
