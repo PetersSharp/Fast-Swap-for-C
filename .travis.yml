@@ -1,0 +1,9 @@
+language: c
+sudo: false # only for faster builds
+script:
+  - gcc --std=c99 -O2 -Wall -pedantic -fprofile-arcs -ftest-coverage -funit-at-a-time swap-test.c -o swap-test
+  - ./swap-test
+  - gcov swap-test.c
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
