@@ -22,7 +22,7 @@ To connect to your project, you need to declare a one header file:
 
 Call swap method:
 ````
-// obj1, obj2 - any C types.
+/* obj1, obj2 - any C types. */
 __swap_fast(obj1, obj2);
 ````
 
