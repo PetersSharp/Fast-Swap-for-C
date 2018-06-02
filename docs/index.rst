@@ -27,7 +27,8 @@ If you use own structures in an array format, you will need to add their descrip
    __builtin_choose_expr( \
       __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 
-
+=====  =====  ===== ===== =====
+1 2 3 4 5
 =====  =====  ===== ===== =====
 int[] 	const int[] 	unsigned int[] 	const unsigned int[]
 short[] 	const short[] 	unsigned short[] 	const unsigned short[]
