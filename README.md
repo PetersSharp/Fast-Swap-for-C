@@ -35,6 +35,8 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
    __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 ```
 
+### Support types
+
 | Support array full swap (copy) types ||||
 | ------------ | ------------ | ------------ | ------------ |
 | int[] | const int[] | unsigned int[] | const unsigned int[] |
@@ -44,7 +46,7 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
 | char[] | const char[] | unsigned char[] | const unsigned char[] |
 
 |  Pointer swap only (copy) types ||||
-| ------------ |
+| ------------ | ------------ | ------------ | ------------ |
 | char* | const char* | unsigned char* | const unsigned char* |
 | void* | const void* | void*[] | const void*[] |
 
