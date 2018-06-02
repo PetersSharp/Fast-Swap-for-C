@@ -32,19 +32,6 @@ If you use own structures in an array format, you will need to add their descrip
 |1                    |        2| 3 |
 +---------------------+---------+---+
 
-=====  =====  ===== ======
- Array full size swap types:
---------------------
-  A           B                AorB                  CoC
-===== ===== ===== ======
-int[] 	   const int[] 	    unsigned int[]        const unsigned int[]
-short[] 	   const short[] 	    unsigned short[]      const unsigned short[]
-long[] 	   const long[] 	    unsigned long[]       const unsigned long[]
-long long[] const long long[]  unsigned long long[]  unsigned const long long[]
-char[] 	   const char[] 	    unsigned char[] 	     const unsigned char[]
-=====       =====             =====                 ======
-
-
 +------------+------------+-----------+-----------+
 | Array full size swap types:  |
 +============+============+===========+===========+
