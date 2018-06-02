@@ -37,7 +37,7 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
 
 ### Support types
 
-| Array full size swap types ||||
+| Array full size swap types: ||||
 | ------------ | ------------ | ------------ | ------------ |
 | int[] | const int[] | unsigned int[] | const unsigned int[] |
 | short[] | const short[] | unsigned short[] | const unsigned short[] |
@@ -50,7 +50,7 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
 | char* | const char* | unsigned char* | const unsigned char* |
 | void* | const void* | void*[] | const void*[] |
 
-|  Full size swap types |
+|  Full size swap types: |
 | ------------ |
 | all other pointer C types |
 
