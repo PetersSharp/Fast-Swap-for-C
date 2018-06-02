@@ -27,17 +27,3 @@ If you use own structures in an array format, you will need to add their descrip
    __builtin_choose_expr( \
       __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 
-
-+---------------------+---------+---+
-|1                    |        2| 3 |
-+---------------------+---------+---+
-
-+------------+------------+-----------+-----------+
-| Array full size swap types: | | | |
-+============+============+===========+===========+
-| int[] | const int[] | unsigned int[] | const unsigned int[] |
-| short[] | const short[] | unsigned short[] | const unsigned short[] |
-| long[] | const long[] | unsigned long[] | const unsigned long[] |
-| long long[] | const long long[] | unsigned long long[] | unsigned const long long[] |
-| char[] | const char[] | unsigned char[] | const unsigned char[] |
-+------------+------------+-----------+-----------+
