@@ -9,6 +9,10 @@
 
 Fast swap for C (gcc required), use only the header file [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h).
 
+| Header ||
+|--------------|
+| 0 | 1 |
+
 A functional combine producing swap objects of any types.
 - Automatic calculation of the size of the element to be swapped.
 - Check the dimension of both elements.
