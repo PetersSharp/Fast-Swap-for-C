@@ -9,10 +9,6 @@
 
 Fast swap for C (gcc required), use only the header file [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h).
 
-| Header ||
-|--------------|
-| 0 | 1 |
-
 A functional combine producing swap objects of any types.
 - Automatic calculation of the size of the element to be swapped.
 - Check the dimension of both elements.
@@ -39,8 +35,8 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
    __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 ```
 
-|  Support array full swap (copy) types ||||
-| ------------ |
+|  <td colspan=4>Support array full swap (copy) types
+| ------------ | ------------ | ------------ | ------------ |
 | int[] | const int[] | unsigned int[] | const unsigned int[] |
 | short[] | const short[] | unsigned short[] | const unsigned short[] |
 | long[] | const long[] | unsigned long[] | const unsigned long[] |
