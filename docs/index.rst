@@ -1,4 +1,4 @@
-Fast swap for C (gcc required), use only the header file [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h).
+Fast swap for C (gcc required), use only the header file `fswap.h <https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h>`_.
 
 A functional combine producing swap objects of any types.
 ----------
@@ -25,11 +25,3 @@ If you use own structures in an array format, you will need to add their descrip
    __builtin_choose_expr( \
       __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 
-
-hhhhhhhhhhh
-
-    import pkg
-    x = pkg.Pkg()
-    x.foo()
-   
-dddddddddddd
