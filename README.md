@@ -1,6 +1,6 @@
 # Fast Swap for C
 
-[![GitHub Download fswap.h](https://github-basic-badges.herokuapp.com/downloads/kennedyoliveira/github-basic-badges/fswap.h.svg)](https://peterssharp.github.io/Fast-Swap-for-C/fswap.h)
+[![GitHub Download fswap.h](https://github-basic-badges.herokuapp.com/downloads/PetersSharp/Fast-Swap-for-C/fswap.h.svg)]()
 [![GitHub Download Count](https://github-basic-badges.herokuapp.com/downloads/PetersSharp/Fast-Swap-for-C/total.svg)]()
 [![Build Status](https://travis-ci.org/PetersSharp/Fast-Swap-for-C.svg)](https://travis-ci.org/PetersSharp/Fast-Swap-for-C)
 [![codecov.io](https://codecov.io/github/PetersSharp/Fast-Swap-for-C/coverage.svg?branch=master)](https://codecov.io/github/PetersSharp/Fast-Swap-for-C?branch=master)
