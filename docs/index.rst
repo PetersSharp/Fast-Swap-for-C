@@ -33,8 +33,8 @@ If you use own structures in an array format, you will need to add their descrip
 +---------------------+---------+---+
 
 =====  =====  ======
-   Inputs     Output
-------------  ------
+ Array full size swap types:
+--------------------
   A      B    A or B
 =====  =====  ======
 False  False  False
