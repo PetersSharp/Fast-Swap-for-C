@@ -27,7 +27,7 @@ __swap_fast(obj1, obj2);
 ````
 
 If you use own structures in an array format, you will need to add their description to [_fswap.h_](
-https://peterssharp.github.io/Fast-Swap-for-C/fswap.h), example:
+https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
 ````
  __builtin_choose_expr( \
    __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
