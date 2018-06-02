@@ -1,13 +1,15 @@
 Fast swap for C (gcc required), use only the header file [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h).
 
 A functional combine producing swap objects of any types.
+----------
+
 - Automatic calculation of the size of the element to be swapped.
 - Check the dimension of both elements.
 - Checking the identity of both elements.
 - High speed of data processing.
 - Support C99 and above.
 
-To connect to your project, you need to declare a one header file:
+To connect to your project, you need to declare a one header file::
 
    #include "fswap.h"
 
