@@ -70,7 +70,11 @@
         __builtin_types_compatible_p(__typeof__(A), void*), __swap_p((void**)&A, (void**)&B), \
             __builtin_choose_expr( \
         __builtin_types_compatible_p(__typeof__(A), const void*), __swap_p((void**)&A, (void**)&B), \
-    __swap(A, B, sizeof(*A), sizeof(*B)))))))))))))))))))))))))))))
+            __builtin_choose_expr( \
+        __builtin_types_compatible_p(__typeof__(A), void[]), __swap(A, B, sizeof(A), sizeof(B)), \
+            __builtin_choose_expr( \
+        __builtin_types_compatible_p(__typeof__(A), const void[]), __swap(A, B, sizeof(A), sizeof(B)), \
+    __swap(A, B, sizeof(*A), sizeof(*B)))))))))))))))))))))))))))))))
 
 
 __attribute__((always_inline)) void __swap_p(void **a, void **b) {
