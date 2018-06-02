@@ -5,7 +5,7 @@
 [![Coverage Status](https://codeclimate.com/github/PetersSharp/Fast-Swap-for-C/badges/coverage.svg)](https://codeclimate.com/github/PetersSharp/Fast-Swap-for-C/coverage)
 [![Code Climate](https://codeclimate.com/github/PetersSharp/Fast-Swap-for-C/badges/gpa.svg)](https://codeclimate.com/github/PetersSharp/Fast-Swap-for-C)
 
-Fast swap for C (gcc required), use only the header file _fswap.h_.
+Fast swap for C (gcc required), use only the header file [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h).
 
 A functional combine producing swap objects of any types.
 - Automatic calculation of the size of the element to be swapped.
@@ -26,7 +26,7 @@ Call swap method:
 __swap_fast(obj1, obj2);
 ````
 
-If you use own structures in an array format, you will need to add their description to _fswap.h_, example:
+If you use own structures in an array format, you will need to add their description to [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
 ````
  __builtin_choose_expr( \
    __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
