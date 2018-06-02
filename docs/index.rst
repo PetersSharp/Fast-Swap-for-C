@@ -23,3 +23,11 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
    __builtin_choose_expr( \
       __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 
+
+hhhhhhhhhhh
+
+    import pkg
+    x = pkg.Pkg()
+    x.foo()
+   
+dddddddddddd
