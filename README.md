@@ -50,6 +50,9 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
 | char* | const char* | unsigned char* | const unsigned char* |
 | void* | const void* | void*[] | const void*[] |
 
+|  Pointer full swap types |
+| ------------ |
+| all other pointer C types |
 
 
 Inspire:        [ru.stackoverflow.com](https://ru.stackoverflow.com/questions/836089/%d0%9e%d0%b1%d0%bc%d0%b5%d0%bd-%d1%87%d0%b5%d1%80%d0%b5%d0%b7-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d0%b8/836167#836167)  
