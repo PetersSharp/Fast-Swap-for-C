@@ -27,6 +27,7 @@ Call swap method:
 /* obj1, obj2 - any C types. */
 __swap_fast(obj1, obj2);
 ```
+> Add new types
 
 If you use own structures in an array format, you will need to add their description to [_fswap.h_](
 https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
@@ -35,7 +36,7 @@ https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h), example:
    __builtin_types_compatible_p(__typeof__(A), struct my_struct[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
 ```
 
-### Support types
+> Support types
 
 | Array full size swap types: ||||
 | ------------ | ------------ | ------------ | ------------ |
