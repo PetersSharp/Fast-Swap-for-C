@@ -41,4 +41,5 @@ Inspire:        [ru.stackoverflow.com](https://ru.stackoverflow.com/questions/83
 OnLine example: [coliru.stacked-crooked.com](http://coliru.stacked-crooked.com/a/be12a57be0162860)  
 Git repository: [github](https://github.com/PetersSharp/Fast-Swap-for-C)  
 Web:            [home](https://peterssharp.github.io/Fast-Swap-for-C/)   
+Docs:           [readthedocs](https://fast-swap-for-c.readthedocs.io/en/latest/?badge=latest)
 
