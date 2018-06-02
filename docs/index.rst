@@ -32,6 +32,16 @@ If you use own structures in an array format, you will need to add their descrip
 |1                    |        2| 3 |
 +---------------------+---------+---+
 
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+=====  =====  ======
+
+
 =====  =====  ===== ===== =====
 1 2 3 4 5
 =====  =====  ===== ===== =====
