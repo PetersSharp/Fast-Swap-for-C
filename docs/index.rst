@@ -36,18 +36,11 @@ If you use own structures in an array format, you will need to add their descrip
  Array full size swap types:
 --------------------
   A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-=====  =====  ======
-
-
-=====  =====  ===== ===== =====
-1 2 3 4 5
-=====  =====  ===== ===== =====
+=====  =====  =====  =====  ======
 int[] 	const int[] 	unsigned int[] 	const unsigned int[]
 short[] 	const short[] 	unsigned short[] 	const unsigned short[]
 long[] 	const long[] 	unsigned long[] 	const unsigned long[]
 long long[] 	const long long[] 	unsigned long long[] 	unsigned const long long[]
 char[] 	const char[] 	unsigned char[] 	const unsigned char[]
-=====  =====  ===== ===== =====
+=====  =====  =====  =====  ======
+
