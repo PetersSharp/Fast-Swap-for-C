@@ -17,7 +17,7 @@
 #ifndef FAST_SWAP_H
 #define FAST_SWAP_H
 
-#define __swap_wrapper(A,B) __extension__ \
+#define __swap_fast(A,B) __extension__ \
     (__builtin_choose_expr( \
         __builtin_types_compatible_p(__typeof__(A), int[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
             __builtin_choose_expr( \

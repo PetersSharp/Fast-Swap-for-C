@@ -15,7 +15,7 @@ int main(void)
     double da = 0.123, db = 0.456, *pda = &da, *pdb = &db;
 
     printf("%d)\tInt*      pia = %d, pib = %d\n", __LINE__, *pia, *pib);
-    __swap_wrapper(pia, pib);
+    __swap_fast(pia, pib);
     printf("%d)\tInt*      pia = %d, pib = %d\n", __LINE__, *pia, *pib);
 
     printf("%d)\tInt Array iaa = {", __LINE__);
@@ -25,7 +25,7 @@ int main(void)
     }
     printf(" }\n");
 
-    __swap_wrapper(iaa, iba);
+    __swap_fast(iaa, iba);
 
     printf("%d)\tInt Array iaa = {", __LINE__);
     for (i = 0; i < __NELE(iaa); i++)
@@ -35,19 +35,19 @@ int main(void)
     printf(" }\n");
 
     printf("%d)\tChar*     psa = %s, psb = %s\n", __LINE__, psa, psb);
-    __swap_wrapper(psa, psb);
+    __swap_fast(psa, psb);
     printf("%d)\tChar*     psa = %s, psb = %s\n", __LINE__, psa, psb);
 
     printf("%d)\tChar[]    sa  = %s, sb = %s\n",  __LINE__, sa, sb);
-    __swap_wrapper(sa, sb);
+    __swap_fast(sa, sb);
     printf("%d)\tChar[]    sa  = %s, sb = %s\n",  __LINE__, sa, sb);
 
     printf("%d)\tDouble*   pda = %f, pdb = %f\n", __LINE__, *pda, *pdb);
-    __swap_wrapper(pda, pdb);
+    __swap_fast(pda, pdb);
     printf("%d)\tDouble*   pda = %f, pdb = %f\n", __LINE__, *pda, *pdb);
 
     printf("%d)\tFloat*    pfa  = %f, pfb = %f\n", __LINE__, *pfa, *pfb);
-    __swap_wrapper(pfa, pfb);
+    __swap_fast(pfa, pfb);
     printf("%d)\tFloat*    pfa  = %f, pfb = %f\n", __LINE__, *pfa, *pfb);
 
     return 0;
