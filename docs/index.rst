@@ -32,7 +32,7 @@ If you use own structures in an array format, you will need to add their descrip
 |1                    |        2| 3 |
 +---------------------+---------+---+
 
-+------------+------------+-----------+-----------+
++-------------------------------------------------+
 | Array full size swap types:  |
 +============+============+===========+===========+
 | int[] | const int[] | unsigned int[] | const unsigned int[] |
