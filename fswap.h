@@ -17,45 +17,72 @@
 #ifndef FAST_SWAP_H
 #define FAST_SWAP_H
 /**
+ * @file ./fswap.h
  * @mainpage Fast swap for C, any types to any types
- * @see https://github.com/PetersSharp/Fast-Swap-for-C
  * @copyright  Copyright (C) 2018 PS
- * @file fswap.h
  * @brief Fast swap public library header
- */
-
-/**
+ *
+ * - Reference @ref: fswap.h
+ * - Main macro ::__swap_fast(A,B)
+ *
  * A functional combine producing swap objects of any types.
  *
- *  * Automatic calculation of the size of the item to be exchanged (swapped).
- *  * Check the dimension of both elements.
- *  * Checking the identity of both elements.
- *  * High speed of data processing.
- *  * Support C99 and above.
- */
-
-/** @file swap-test.c
- *  @brief A basic example for usage.
- *         Details: Testing automatic swapped types.
- *         <a href="http://coliru.stacked-crooked.com/a/be12a57be0162860" rel="nofollow">OnLine example</a>
+ *  - Automatic calculation of the size of the item to be exchanged (swapped).
+ *  - Check the dimension of both elements.
+ *  - Checking the identity of both elements.
+ *  - High speed of data processing.
+ *  - Support C99 and above.
+ *
+ * swap-test.c - basic example for usage.
+ *
+ * Testing automatic swapped types, run:
+ * @code{.sh}
+ *    make; ./swap-test
+ * @endcode
+ *
+ * Show support types, run:
+ * @code{.sh}
+ *    make types
+ * @endcode
+ *
+ * @see https://github.com/PetersSharp/Fast-Swap-for-C [Git Home]
+ * @see https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/swap-test.c [Test Example]
+ * @see http://coliru.stacked-crooked.com/a/be12a57be0162860 [OnLine example]
+ * 
  */
 
 /**
  * @brief Main swap routine macro, not use other functions directly.
  *        In the macro, the type of object and its size are determined.
  *        Depending on this, the function and the swap (copy) mode are selected.
- * @param A: any C types, equals B.
- * @param B: any C types, equals A.
+ * @param[in, out] A: any C types, equals B.
+ * @param[in, out] B: any C types, equals A.
  *
  * Example:
- * @code{c}
- * // obj1, obj2 - any C types.
- * __swap_fast(obj1, obj2);
- * @endcode
  *
- * @attention
+ */
+/**
+ * \htmlonly
+ * Variable A, B - any C types pointer.
+ * \endhtmlonly
+ * @snippet ./swap-test.c Swap int declare
+ * @snippet ./swap-test.c Swap int example
+ *
+ * @snippet ./swap-test.c Swap int array declare
+ * @snippet ./swap-test.c Swap int array example
+ *
+ */
+/**
+ * \manonly
+ * Variable obj1, obj2 - any C types pointer, 
+ * __swap_fast(obj1, obj2);
+ * \endmanonly
+ */
+/**
+ * @note
  *     1. To connect to your project, you need to declare a one header file fswap.h
  *     2. If you use own structures in an array format, you will need to add their description to fswap.h
+ *     3. All functions that are automatically selected by ::__swap_fast(A,B), do not use them directly.
  */
 #define __swap_fast(A,B) __extension__ \
     (__builtin_choose_expr( \
@@ -117,15 +144,9 @@
     __swap_p(A, B, sizeof(*A), sizeof(*B)))))))))))))))))))))))))))))))
 
 /**
- * @addtogroup Swap functions interface
- * @attention Functions that are automatically selected by __swap_fast, do not use them directly.
- * @{
- */
-
-/**
  * @brief Swap triple pointers types.
- * @param a: any C types triple pointer, equals type b.
- * @param b: any C types triple pointer, equals type a.
+ * @param a[in, out]: any C types triple pointer, equals type b.
+ * @param b[in, out]: any C types triple pointer, equals type a.
  * @see __swap_fast
  * @attention
  *     1. variable 'a' and 'b' must not be equal.
@@ -139,8 +160,8 @@ __attribute__((always_inline)) inline void __swap_ppp(void ***a, void ***b)
 
 /**
  * @brief Swap double pointers types.
- * @param a: any C types double pointer, equals type b.
- * @param b: any C types double pointer, equals type a.
+ * @param a[in, out]: any C types double pointer, equals type b.
+ * @param b[in, out]: any C types double pointer, equals type a.
  * @see __swap_fast
  * @attention
  *     1. variable 'a' and 'b' must not be equal.
@@ -154,10 +175,10 @@ __attribute__((always_inline)) inline void __swap_pp(void **a, void **b)
 
 /**
  * @brief Swap all sized types.
- * @param a: any C types pointer, equals type b.
- * @param b: any C types pointer, equals type a.
- * @param na: swap size to 'a' type.
- * @param nb: swap size to 'b' type.
+ * @param a[in, out]: any C types pointer, equals type b.
+ * @param b[in, out]: any C types pointer, equals type a.
+ * @param na[in]: swap size to a type.
+ * @param nb[in]: swap size to b type.
  * @see __swap_fast
  * @attention
  *     1. variable 'a' and 'b' must not be equal.
@@ -183,7 +204,5 @@ __attribute__((always_inline)) inline void __swap_p(void *a, void *b, size_t na,
         va[na] ^= vb[na];
     }
 }
-
-/**@}*/
 
 #endif
