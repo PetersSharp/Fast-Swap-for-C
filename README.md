@@ -10,7 +10,7 @@
 Fast swap for C, _any types to any types_ (gcc required), use only the header file [_fswap.h_](https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/fswap.h).
 
 A functional combine producing swap objects of any types.
-- Automatic calculation of the size of the element to be swapped.
+- Automatic calculation of the size of the item to be exchanged (swapped)
 - Check the dimension of both elements.
 - Checking the identity of both elements.
 - High speed of data processing.
