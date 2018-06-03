@@ -2,9 +2,7 @@
 
 [![Github releases](https://img.shields.io/github/downloads/PetersSharp/Fast-Swap-for-C/total.svg)](https://GitHub.com/PetersSharp/Fast-Swap-for-C/releases/)
 [![Documentation Status](https://readthedocs.org/projects/fast-swap-for-c/badge/?version=latest)](https://fast-swap-for-c.readthedocs.io/en/latest/?badge=latest)
-
 [![Manual](https://img.shields.io/badge/Documentation-MAN-brightgreen.svg?style=flat)](https://peterssharp.github.io/Fast-Swap-for-C/html/index.html)
-
 [![Build Status](https://travis-ci.org/PetersSharp/Fast-Swap-for-C.svg)](https://travis-ci.org/PetersSharp/Fast-Swap-for-C)
 [![codecov.io](https://codecov.io/github/PetersSharp/Fast-Swap-for-C/coverage.svg?branch=master)](https://codecov.io/github/PetersSharp/Fast-Swap-for-C?branch=master)
 [![Coverage Status](https://codeclimate.com/github/PetersSharp/Fast-Swap-for-C/badges/coverage.svg)](https://codeclimate.com/github/PetersSharp/Fast-Swap-for-C/coverage)
