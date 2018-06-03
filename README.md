@@ -63,4 +63,6 @@ OnLine example: [coliru.stacked-crooked.com](http://coliru.stacked-crooked.com/a
 Git repository: [github](https://github.com/PetersSharp/Fast-Swap-for-C)  
 Web:            [home](https://peterssharp.github.io/Fast-Swap-for-C/)   
 Docs:           [readthedocs](https://fast-swap-for-c.readthedocs.io/en/latest/?badge=latest)
+Man:            [manual(3)](https://raw.githubusercontent.com/PetersSharp/Fast-Swap-for-C/master/docs/fswap.h.3)
+
 
