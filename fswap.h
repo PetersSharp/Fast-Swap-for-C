@@ -55,8 +55,8 @@
  * @brief Main swap routine macro, not use other functions directly.
  *        In the macro, the type of object and its size are determined.
  *        Depending on this, the function and the swap (copy) mode are selected.
- * @param[in, out] A: any C types, equals B.
- * @param[in, out] B: any C types, equals A.
+ * @param A: any C types, equals B.
+ * @param B: any C types, equals A.
  *
  * Example:
  *
@@ -145,8 +145,8 @@
 
 /**
  * @brief Swap triple pointers types.
- * @param a[in, out]: any C types triple pointer, equals type b.
- * @param b[in, out]: any C types triple pointer, equals type a.
+ * @param a: any C types triple pointer, equals type b.
+ * @param b: any C types triple pointer, equals type a.
  * @see __swap_fast
  * @attention
  *     1. variable 'a' and 'b' must not be equal.
@@ -160,8 +160,8 @@ __attribute__((always_inline)) inline void __swap_ppp(void ***a, void ***b)
 
 /**
  * @brief Swap double pointers types.
- * @param a[in, out]: any C types double pointer, equals type b.
- * @param b[in, out]: any C types double pointer, equals type a.
+ * @param a: any C types double pointer, equals type b.
+ * @param b: any C types double pointer, equals type a.
  * @see __swap_fast
  * @attention
  *     1. variable 'a' and 'b' must not be equal.
@@ -175,10 +175,10 @@ __attribute__((always_inline)) inline void __swap_pp(void **a, void **b)
 
 /**
  * @brief Swap all sized types.
- * @param a[in, out]: any C types pointer, equals type b.
- * @param b[in, out]: any C types pointer, equals type a.
- * @param na[in]: swap size to a type.
- * @param nb[in]: swap size to b type.
+ * @param a: any C types pointer, equals type b.
+ * @param b: any C types pointer, equals type a.
+ * @param na: swap size to a type.
+ * @param nb: swap size to b type.
  * @see __swap_fast
  * @attention
  *     1. variable 'a' and 'b' must not be equal.
