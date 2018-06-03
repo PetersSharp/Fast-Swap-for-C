@@ -4,7 +4,7 @@
 //    inspire: https://ru.stackoverflow.com/questions/836089/%d0%9e%d0%b1%d0%bc%d0%b5%d0%bd-%d1%87%d0%b5%d1%80%d0%b5%d0%b7-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d0%b8/836167#836167
 //    online example: http://coliru.stacked-crooked.com/a/be12a57be0162860
 //    require: GCC
-//    build example: gcc --std=c99 -O2 -Wall -pedantic -funit-at-a-time swap-test.c ; ./a.out
+//    build example: gcc --std=gnu99 -O2 -Wall -pedantic -funit-at-a-time swap-test.c ; ./a.out
 //    Copyright (C) 2018, @PS
 //
 //     - https://github.com/PetersSharp/Fast-Swap-for-C
@@ -16,7 +16,47 @@
 
 #ifndef FAST_SWAP_H
 #define FAST_SWAP_H
+/**
+ * @mainpage Fast swap for C, any types to any types
+ * @see https://github.com/PetersSharp/Fast-Swap-for-C
+ * @copyright  Copyright (C) 2018 PS
+ * @file fswap.h
+ * @brief Fast swap public library header
+ */
 
+/**
+ * A functional combine producing swap objects of any types.
+ *
+ *  * Automatic calculation of the size of the item to be exchanged (swapped).
+ *  * Check the dimension of both elements.
+ *  * Checking the identity of both elements.
+ *  * High speed of data processing.
+ *  * Support C99 and above.
+ */
+
+/** @file swap-test.c
+ *  @brief A basic example for usage.
+ *         Details: Testing automatic swapped types.
+ *         <a href="http://coliru.stacked-crooked.com/a/be12a57be0162860" rel="nofollow">OnLine example</a>
+ */
+
+/**
+ * @brief Main swap routine macro, not use other functions directly.
+ *        In the macro, the type of object and its size are determined.
+ *        Depending on this, the function and the swap (copy) mode are selected.
+ * @param A: any C types, equals B.
+ * @param B: any C types, equals A.
+ *
+ * Example:
+ * @code{c}
+ * // obj1, obj2 - any C types.
+ * __swap_fast(obj1, obj2);
+ * @endcode
+ *
+ * @attention
+ *     1. To connect to your project, you need to declare a one header file fswap.h
+ *     2. If you use own structures in an array format, you will need to add their description to fswap.h
+ */
 #define __swap_fast(A,B) __extension__ \
     (__builtin_choose_expr( \
         __builtin_types_compatible_p(__typeof__(A), int[]), __swap_p(A, B, sizeof(A), sizeof(B)), \
@@ -76,19 +116,54 @@
         __builtin_types_compatible_p(__typeof__(A), const void*[]), __swap_ppp((void***)&A, (void***)&B), \
     __swap_p(A, B, sizeof(*A), sizeof(*B)))))))))))))))))))))))))))))))
 
+/**
+ * @addtogroup Swap functions interface
+ * @attention Functions that are automatically selected by __swap_fast, do not use them directly.
+ * @{
+ */
 
+/**
+ * @brief Swap triple pointers types.
+ * @param a: any C types triple pointer, equals type b.
+ * @param b: any C types triple pointer, equals type a.
+ * @see __swap_fast
+ * @attention
+ *     1. variable 'a' and 'b' must not be equal.
+ *     2. do not use this function directly.
+ */
 __attribute__((always_inline)) inline void __swap_ppp(void ***a, void ***b)
 {
     void **c = *a;
     *a = *b; *b = c;
 }
 
+/**
+ * @brief Swap double pointers types.
+ * @param a: any C types double pointer, equals type b.
+ * @param b: any C types double pointer, equals type a.
+ * @see __swap_fast
+ * @attention
+ *     1. variable 'a' and 'b' must not be equal.
+ *     2. do not use this function directly.
+ */
 __attribute__((always_inline)) inline void __swap_pp(void **a, void **b)
 {
     void *c = *a;
     *a = *b; *b = c;
 }
 
+/**
+ * @brief Swap all sized types.
+ * @param a: any C types pointer, equals type b.
+ * @param b: any C types pointer, equals type a.
+ * @param na: swap size to 'a' type.
+ * @param nb: swap size to 'b' type.
+ * @see __swap_fast
+ * @attention
+ *     1. variable 'a' and 'b' must not be equal.
+ *     2. variable 'na' and 'nb' must be equal.
+ *     3. do not use this function directly.
+ */
 __attribute__((always_inline)) inline void __swap_p(void *a, void *b, size_t na, size_t nb)
 {
     if ((!na) || (na != nb)) { return; }
@@ -108,5 +183,7 @@ __attribute__((always_inline)) inline void __swap_p(void *a, void *b, size_t na,
         va[na] ^= vb[na];
     }
 }
+
+/**@}*/
 
 #endif
