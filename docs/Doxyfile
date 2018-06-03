@@ -1,6 +1,7 @@
 
 PROJECT_NAME = "Fast swap for C"
 INPUT = ../fswap.h
+OUTPUT_DIRECTORY       = docs
 WARN_NO_PARAMDOC       = YES
 ENABLE_PREPROCESSING   = YES
 MACRO_EXPANSION        = YES
