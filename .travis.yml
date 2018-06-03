@@ -1,9 +1,29 @@
 language: c
-sudo: false # only for faster builds
+
+sudo: false
+
+branches:
+  only:
+    - master
+
+addons:
+  apt:
+    packages:
+      - doxygen
+
 script:
+  - doxygen docs/Doxyfile
   - gcc --std=c99 -O2 -Wall -pedantic -fprofile-arcs -ftest-coverage -funit-at-a-time swap-test.c -o swap-test
   - ./swap-test
   - gcov swap-test.c
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs/html
+  github_token: $GH_REPO_TOKEN
+  on:
+    branch: master
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
