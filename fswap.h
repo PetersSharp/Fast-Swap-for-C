@@ -19,7 +19,6 @@
 /**
  * @file ./fswap.h
  * @mainpage Fast swap for C, any types to any types
- * @copyright  Copyright (C) 2018 PS
  * @brief Fast swap public library header
  *
  * - Reference @ref: fswap.h
@@ -50,6 +49,7 @@
  * @see https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/swap-test.c [Test source example]
  * @see http://coliru.stacked-crooked.com/a/be12a57be0162860 [OnLine test example]
  *
+ * @copyright  2018 (c) PS
  */
 
 /**
