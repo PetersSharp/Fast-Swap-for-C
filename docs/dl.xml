@@ -17,7 +17,7 @@
     </tab>
     <tab type="usergroup" visible="yes" title="Examples" briefdescription="Other examples">
         <tab type="pages" visible="yes" title="" intro=""/>
-        <tab type="examples" visible="yes" title="" intro=""/>
+        <tab type="examples" visible="no" title="" intro=""/>
         <tab type="user" visible="yes" title="Example from Git" url="https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/swap-test.c" />
         <tab type="user" visible="yes" title="Example OnLine" url="http://coliru.stacked-crooked.com/a/be12a57be0162860" />
         <tab type="user" visible="yes" title="Inspire this" url="https://ru.stackoverflow.com/questions/836089/%d0%9e%d0%b1%d0%bc%d0%b5%d0%bd-%d1%87%d0%b5%d1%80%d0%b5%d0%b7-%d1%83%d0%ba%d0%b0%d0%b7%d0%b0%d1%82%d0%b5%d0%bb%d0%b8/836167#836167" />
