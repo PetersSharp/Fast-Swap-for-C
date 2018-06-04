@@ -1,5 +1,5 @@
 /**
- * @file swap-example
+ * @page swap-example
  * @brief Fast swap - basic example for usage.
  * \include ./swap-test.c
  */

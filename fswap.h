@@ -33,7 +33,7 @@
  *  - High speed of data processing.
  *  - Support C99 and above.
  *
- * swap-test.c - basic example for usage.
+ * Basic example for usage: @ref swap-example
  *
  * Testing automatic swapped types, run:
  * @code{.sh}
@@ -45,10 +45,11 @@
  *    make types
  * @endcode
  *
+ * @see https://peterssharp.github.io/Fast-Swap-for-C/ [Web Home]
  * @see https://github.com/PetersSharp/Fast-Swap-for-C [Git Home]
- * @see https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/swap-test.c [Test Example]
- * @see http://coliru.stacked-crooked.com/a/be12a57be0162860 [OnLine example]
- * 
+ * @see https://github.com/PetersSharp/Fast-Swap-for-C/blob/master/swap-test.c [Test source example]
+ * @see http://coliru.stacked-crooked.com/a/be12a57be0162860 [OnLine test example]
+ *
  */
 
 /**
