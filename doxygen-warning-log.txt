@@ -1,0 +1,2 @@
+error: the type 'dirs' is not supported for the entry tag within a navindex! Check your layout file!
+/home/travis/build/PetersSharp/Fast-Swap-for-C/fswap.h:22: warning: expected whitespace after : command

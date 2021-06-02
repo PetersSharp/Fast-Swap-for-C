@@ -1,0 +1,199 @@
+.TH "fswap.h" 3 "Mon Jun 4 2018" "Fast swap for C" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fswap.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__swap_fast\fP(A,  B)"
+.br
+.RI "Main swap routine macro, not use other functions directly\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB__swap_ppp\fP (void ***a, void ***b)"
+.br
+.RI "Swap triple pointers types\&. "
+.ti -1c
+.RI "void \fB__swap_pp\fP (void **a, void **b)"
+.br
+.RI "Swap double pointers types\&. "
+.ti -1c
+.RI "void \fB__swap_p\fP (void *a, void *b, size_t na, size_t nb)"
+.br
+.RI "Swap all sized types\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __swap_fast(A, B)"
+
+.PP
+Main swap routine macro, not use other functions directly\&. In the macro, the type of object and its size are determined\&. Depending on this, the function and the swap (copy) mode are selected\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIA\fP any C types, equals B\&. 
+.br
+\fIB\fP any C types, equals A\&.
+.RE
+.PP
+Example:  
+.PP
+.nf
+
+    int ia = 10, ib = 20, *pia = &ia, *pib = &ib;
+
+
+.fi
+.PP
+.PP
+.nf
+
+    printf("%d)\tInt*      pia = %d, pib = %d\n", __LINE__, *pia, *pib);
+
+    __swap_fast(pia, pib);
+
+    printf("%d)\tInt*      pia = %d, pib = %d\n", __LINE__, *pia, *pib);
+
+.fi
+.PP
+ 
+.PP
+.nf
+
+    int iaa[] = { 1, 2, 3, 4, 5 }, iba[] = { 6, 7, 8, 9, 0 };
+
+
+.fi
+.PP
+.PP
+.nf
+
+    __swap_fast(iaa, iba);
+
+    printf("%d)\tInt Array iaa = {", __LINE__);
+    for (i = 0; i < __NELE(iaa); i++)
+    {
+        printf(" %d,", iaa[i]);
+    }
+    printf(" }\n");
+
+.fi
+.PP
+ 
+Variable obj1, obj2 - any C types pointer, 
+__swap_fast(obj1, obj2);
+ 
+.PP
+\fBNote:\fP
+.RS 4
+
+.IP "1." 4
+To connect to your project, you need to declare a one header file \fBfswap\&.h\fP
+.IP "2." 4
+If you use own structures in an array format, you will need to add their description to \fBfswap\&.h\fP
+.IP "3." 4
+All functions that are automatically selected by \fB__swap_fast(A,B)\fP, do not use them directly\&. 
+.PP
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void __swap_p (void * a, void * b, size_t na, size_t nb)\fC [inline]\fP"
+
+.PP
+Swap all sized types\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP any C types pointer, equals type b\&. 
+.br
+\fIb\fP any C types pointer, equals type a\&. 
+.br
+\fIna\fP swap size to a type\&. 
+.br
+\fInb\fP swap size to b type\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fB__swap_fast\fP 
+.RE
+.PP
+\fBAttention:\fP
+.RS 4
+.IP "1." 4
+variable 'a' and 'b' must not be equal\&.
+.IP "2." 4
+variable 'na' and 'nb' must be equal\&.
+.IP "3." 4
+do not use this function directly\&. 
+.PP
+.RE
+.PP
+
+.SS "void __swap_pp (void ** a, void ** b)\fC [inline]\fP"
+
+.PP
+Swap double pointers types\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP any C types double pointer, equals type b\&. 
+.br
+\fIb\fP any C types double pointer, equals type a\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fB__swap_fast\fP 
+.RE
+.PP
+\fBAttention:\fP
+.RS 4
+.IP "1." 4
+variable 'a' and 'b' must not be equal\&.
+.IP "2." 4
+do not use this function directly\&. 
+.PP
+.RE
+.PP
+
+.SS "void __swap_ppp (void *** a, void *** b)\fC [inline]\fP"
+
+.PP
+Swap triple pointers types\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP any C types triple pointer, equals type b\&. 
+.br
+\fIb\fP any C types triple pointer, equals type a\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fB__swap_fast\fP 
+.RE
+.PP
+\fBAttention:\fP
+.RS 4
+.IP "1." 4
+variable 'a' and 'b' must not be equal\&.
+.IP "2." 4
+do not use this function directly\&. 
+.PP
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Fast swap for C from the source code\&.
